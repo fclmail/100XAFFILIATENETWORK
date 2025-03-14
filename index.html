@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>  
 <html lang="en">  
 <head>  
@@ -13,22 +12,26 @@
             margin: 0;   
             display: flex;   
             flex-direction: column;   
-            justify-content: center;   
+            justify-content: flex-start; /* Align items to the top */  
             align-items: center;   
             height: 100vh;   
             position: relative;   
+            overflow: auto; /* Enable scroll if content overflows */  
         }  
         h1 {   
-            font-size: 2.5em; /* Slightly smaller to better fit inside the border */   
+            font-size: 2.5em; /* Title size */   
             color: #00ccff; /* Light neon blue color */   
-            margin: 0; /* Remove bottom margin to fit perfectly inside the border */  
+            margin: 0; /* Remove margin */  
         }  
         .container {   
             border: 5px solid #00ccff; /* Light neon blue border */   
-            padding: 30px; /* Adjusted padding for more space inside the border */   
+            padding: 30px; /* Padding for spacing inside the container */   
             box-shadow: 0 0 20px rgba(0, 204, 255, 0.8); /* Light neon blue effect */   
             border-radius: 10px;   
             text-align: center;  
+            width: 90%; /* Responsive width */  
+            max-width: 600px; /* Maximum width */  
+            margin-bottom: 20px; /* Add margin for spacing between containers */  
         }  
         label {   
             display: block;   
@@ -74,6 +77,9 @@
 
         <br>  
         <button onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLScNVxaDybSCwk8riQ5GH5z5F_bn7Xd89tICgdqFEe8Zs8Bldg/viewform?usp=header';">👆 NEXT CLICK HERE  ➡️1. ENTER EMAIL  ➡️  2. "0x........"ENTER YOUR POLYGON RECEIVE ADDRESS➡️ 3 . PASTE YOUR NEW AFFILIATE LINK➡️4 .PRESS SUBMIT  SUCCESS✅🎉</button>  
+        
+        <!-- Add more content to ensure scrolling -->  
+        <div style="height: 800px;"></div> <!-- This is just to create enough content for scrolling -->  
     </div>  
 
     <script>  
