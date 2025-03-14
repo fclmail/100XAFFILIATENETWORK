@@ -1,0 +1,94 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>100 X AFFILIATES</title>  
+    <style>  
+        body {   
+            background-color: black;   
+            color: white;   
+            font-family: Arial, sans-serif;   
+            margin: 0;   
+            display: flex;   
+            flex-direction: column;   
+            justify-content: center;   
+            align-items: center;   
+            height: 100vh;   
+            position: relative;   
+        }  
+        h1 {   
+            font-size: 3em;   
+            color: #00f; /* Bright blue color */   
+            margin-bottom: 20px;   
+        }  
+        .container {   
+            border: 5px solid #00f; /* Bright blue neon border */   
+            padding: 20px;   
+            box-shadow: 0 0 20px #00f; /* Neon effect */   
+            border-radius: 10px;   
+            text-align: center;  
+        }  
+        label {   
+            display: block;   
+            margin: 10px 0 5px;   
+        }  
+        input, button {   
+            padding: 10px;   
+            width: 300px;   
+            margin-top: 10px;   
+            border: 2px solid #00f; /* Bright blue border for input fields */   
+            border-radius: 5px;   
+            background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */  
+            color: white;   
+        }  
+        button {   
+            cursor: pointer;   
+            transition: background-color 0.3s ease;   
+        }  
+        button:hover {   
+            background-color: #0077cc; /* Darker blue on hover */  
+        }  
+        .copy-btn {   
+            background-color: #00ff00; /* Green for copy button */   
+        }  
+        .copy-btn:hover {   
+            background-color: #00cc00; /* Darker green on hover */   
+        }  
+    </style>  
+</head>  
+<body>  
+    <div class="container">  
+        <h1>100 X AFFILIATES</h1>  
+
+        <label for="affiliateCode">Choose Your Affiliate Code:</label>  
+        <input type="text" id="affiliateCode" placeholder="your_affiliate_code">  
+
+        <button onclick="generateAffiliateLink()">Generate Affiliate Link</button>  
+
+        <h2>Your Affiliate Link:</h2>  
+        <input type="text" id="affiliateLink" readonly style="width: 100%;">  
+        
+        <button class="copy-btn" onclick="copyAffiliateLink()">Copy Affiliate Link</button>  
+
+        <br>  
+        <button onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLScNVxaDybSCwk8riQ5GH5z5F_bn7Xd89tICgdqFEe8Zs8Bldg/viewform?usp=header';">Go to 100x-affiliate.com</button>  
+    </div>  
+
+    <script>  
+        function generateAffiliateLink() {  
+            const baseUrl = "https://100x-crypto.com?ref=";  
+            const affiliateCode = document.getElementById("affiliateCode").value;  
+            const affiliateLink = baseUrl + encodeURIComponent(affiliateCode);  
+            document.getElementById("affiliateLink").value = affiliateLink;  
+        }  
+
+        function copyAffiliateLink() {  
+            const copyText = document.getElementById("affiliateLink");  
+            copyText.select();  
+            document.execCommand("copy");  
+            alert("Copied the affiliate link: " + copyText.value);  
+        }  
+    </script>  
+</body>  
+</html>
